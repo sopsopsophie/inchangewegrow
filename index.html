@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  const leaf = document.querySelector('.leaf-link');
+
+  leaf.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent immediate jump
+    document.querySelector('.page').classList.add('fade-out');
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 800); // match transition duration
+  });
+</script>
+
+
+<body>
+  <div class="page">
+    <img src="assets/caterpillar1b.jpg" alt="Main Image">
+ 
+
+  <nav>
+    <a href="cucoon.html"> 
+
+    </a>
+  </nav>
+ 
+  <div class="slider">
+    <img src="assets/clouds.PNG" alt="Sliding PNG" />
+  </div>
+
+  <div class="tree1">
+    <img src="assets/caterpillar2.png" alt="tree PNG" />
+  </div>
+  <div class="cater">
+
+    <img src="assets/caterpillar.PNG" alt="Caterpillar image" /> 
+  </div>
+
+  <a href="cucoon.html" class="leaf-link">
+    <img src="assets/leaf.png" alt="Leaf to next page" />
+  </a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+body {
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+  background: #000; /* Or your background image */
+  color: white;
+}
+
+body {
+  background-image: url("assets/caterpillar1b.jpg");
+  background-size: cover;       /* Scales image to cover the whole screen */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Keeps it centered */
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px; /* Match your image width */
+  animation: slide-across 10s linear infinite;
+}
+
+@keyframes slide-across {
+  0% {
+    left: -300px; /* Fully off-screen left */
+    opacity: 1;
+  }
+  70% {
+    left: 100vw; /* Fully off-screen right */
+    opacity: 1;
+  }
+  90% {
+    left: 100vw;
+    opacity: 0; /* Fade out as pause begins */
+  }
+  100% {
+    left: -300px; /* Back to start position */
+    opacity: 0; /* Stay hidden during reset */
+  }
+}
+
+
+
+.tree1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.tree1 img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+@keyframes shake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(0, 0) rotate(1deg); }
+  50%  { transform: translate(0, 0) rotate(0deg); }
+  75%  { transform: translate(0, 0) rotate(-1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.cater {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cater img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  animation: shake 1s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+.bg-layer,
+.overlay-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.bg-layer img,
+.overlay-layer img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+.bg-layer2,
+.overlay-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.bg-layer2 img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+
+.overlay-layer2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  z-index: 5; /* make sure it sits on top */
+  pointer-events: none; /* optional: lets clicks go through it */
+  animation: float 12s ease-in-out infinite;
+}
+
+
+.overlay-layer2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.leaf-link {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 100px; /* adjust to your leaf image */
+  height: auto;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.leaf-link:hover {
+  transform: scale(1.1);
+}
+
+.leaf-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.page {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
+
+
